@@ -65,7 +65,8 @@ class ProductController extends BaseController
         }
 
         $userId = $this->session->get('user')['id'];
-        $cartItems = $this->cartModel->getCartItemsByUserId($userId);
+// ... di dalam public function showCart() ...
+$cartItems = $this->cartModel->getCartItems($userId);
         
         $total = 0;
         foreach ($cartItems as $item) {

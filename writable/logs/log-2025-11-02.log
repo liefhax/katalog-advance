@@ -1,0 +1,1672 @@
+DEBUG - 2025-11-02 08:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 08:48:31 --> mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#12 {main}
+CRITICAL - 2025-11-02 08:48:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+[Method: POST, Route: api/shipping/cost]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 2 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 08:48:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 4 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 08:48:32 --> [Caused by] mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 5 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 08:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 08:48:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-ZSYRBQ', '2', 'pending', 'baru', '155000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(174): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 08:48:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(192): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 08:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 08:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:08:21 --> mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#12 {main}
+CRITICAL - 2025-11-02 09:08:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+[Method: POST, Route: api/shipping/cost]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 2 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:08:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 4 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:08:21 --> [Caused by] mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 5 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:09:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-B2KSGX', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(175): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:09:15 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(193): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:09:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-B2KSGX', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(199): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:09:15 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(201): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 09:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:09:23 --> mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#12 {main}
+CRITICAL - 2025-11-02 09:09:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+[Method: POST, Route: api/shipping/cost]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 2 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:09:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 4 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:09:23 --> [Caused by] mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 5 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:09:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-PACXIG', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(175): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:09:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(193): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:09:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-PACXIG', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(199): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:09:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(201): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 09:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:09:46 --> mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#12 {main}
+CRITICAL - 2025-11-02 09:09:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+[Method: POST, Route: api/shipping/cost]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 2 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:09:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 4 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:09:46 --> [Caused by] mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 5 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:15:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-DDPJWW', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(175): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:15:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(193): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:15:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-DDPJWW', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(203): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:15:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(205): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 09:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:17:19 --> mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#12 {main}
+CRITICAL - 2025-11-02 09:17:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+[Method: POST, Route: api/shipping/cost]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 2 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:17:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 4 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+CRITICAL - 2025-11-02 09:17:19 --> [Caused by] mysqli_sql_exception: Table 'katalog.tb_ro_cities' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = \'Kabupaten Bangli\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `city_id`
+FROM `tb_ro_cities`
+WHERE `city_name` = :city_name:', [...], false)
+ 5 APPPATH\Controllers\ApiShipping.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:17:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-AP52G1', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(175): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:17:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(193): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:17:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-AP52G1', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(203): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:17:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(205): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 09:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:25:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-ORZV6L', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(175): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:25:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(193): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:25:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-ORZV6L', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(203): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 09:25:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(205): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 09:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 09:31:52 --> ErrorException: Undefined property: stdClass::$city_id
+[Method: POST, Route: api/shipping/cost]
+in APPPATH\Controllers\ApiShipping.php on line 45.
+ 1 APPPATH\Controllers\ApiShipping.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\ApiShipping.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 09:31:54 --> ErrorException: Undefined property: stdClass::$city_id
+[Method: POST, Route: api/shipping/cost]
+in APPPATH\Controllers\ApiShipping.php on line 45.
+ 1 APPPATH\Controllers\ApiShipping.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\ApiShipping.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 09:31:55 --> ErrorException: Undefined property: stdClass::$city_id
+[Method: POST, Route: api/shipping/cost]
+in APPPATH\Controllers\ApiShipping.php on line 45.
+ 1 APPPATH\Controllers\ApiShipping.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\ApiShipping.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 09:32:05 --> ErrorException: Undefined property: stdClass::$city_id
+[Method: POST, Route: api/shipping/cost]
+in APPPATH\Controllers\ApiShipping.php on line 45.
+ 1 APPPATH\Controllers\ApiShipping.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\ApiShipping.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 09:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:43:19 --> [ApiWilayah provinces] Client error: `GET https://api.rajaongkir.com/starter/province` resulted in a `410 Gone` response:
+{"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
+
+DEBUG - 2025-11-02 09:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 09:44:11 --> [ApiWilayah provinces] Client error: `GET https://api.rajaongkir.com/starter/province` resulted in a `410 Gone` response:
+{"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
+
+DEBUG - 2025-11-02 09:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 09:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:15:45 --> ErrorException: Undefined property: stdClass::$city_id
+[Method: POST, Route: api/shipping/cost]
+in APPPATH\Controllers\ApiShipping.php on line 45.
+ 1 APPPATH\Controllers\ApiShipping.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\ApiShipping.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:17:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "addresses/index.php"
+[Method: GET, Route: profile/addresses]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('addresses/index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('addresses/index', [], true)
+ 3 APPPATH\Controllers\AddressController.php(27): view('addresses/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AddressController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddressController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:17:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "addresses/index.php"
+[Method: GET, Route: profile/addresses]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('addresses/index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('addresses/index', [], true)
+ 3 APPPATH\Controllers\AddressController.php(27): view('addresses/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AddressController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddressController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:18:26 --> ErrorException: Undefined property: stdClass::$city_id
+[Method: POST, Route: api/shipping/cost]
+in APPPATH\Controllers\ApiShipping.php on line 45.
+ 1 APPPATH\Controllers\ApiShipping.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\ApiShipping.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 10:18:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-TP0JDA', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(175): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:18:34 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(193): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:18:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-TP0JDA', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(203): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:18:34 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(205): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 10:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:18:42 --> ErrorException: Undefined property: stdClass::$city_id
+[Method: POST, Route: api/shipping/cost]
+in APPPATH\Controllers\ApiShipping.php on line 45.
+ 1 APPPATH\Controllers\ApiShipping.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\ApiShipping.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiShipping->getCost()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiShipping))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 10:22:03 --> [RajaOngkir RequestError] Client error: `POST https://api.rajaongkir.com/starter/cost` resulted in a `410 Gone` response:
+{"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
+
+DEBUG - 2025-11-02 10:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 10:25:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-V18JLX', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(175): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:25:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(193): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:25:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-V18JLX', '2', 'pending', 'baru', '189000', '0', '0', ...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(203): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:25:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(205): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+DEBUG - 2025-11-02 10:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:37:15 --> Error: Call to undefined function CodeIgniter\I18n\random_string()
+[Method: POST, Route: checkout/place-order]
+in APPPATH\Controllers\Checkout.php on line 122.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 10:38:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-HJZUFO', '2', 'pending', 'baru', 189000, 0, 0, 544, 1...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(148): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:38:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(163): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:38:50 --> [Checkout Error] Transaksi gagal disimpan.
+DEBUG - 2025-11-02 10:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 10:39:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-8ESL5O', '2', 'pending', 'baru', 189000, 0, 0, 551, 1...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(148): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:39:13 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(163): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:39:13 --> [Checkout Error] Transaksi gagal disimpan.
+DEBUG - 2025-11-02 10:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 10:42:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-HCLPKO', '2', 'pending', 'baru', 189000, 0, 0, 837, 1...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(148): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:42:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(163): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:42:38 --> [Checkout Error] Transaksi gagal disimpan.
+DEBUG - 2025-11-02 10:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-02 10:42:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('INV-20251102-WAKUIP', '2', 'pending', 'baru', 189000, 0, 0, 492, 1...' at line 1 in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(148): CodeIgniter\Model->insert(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:42:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`katalog`.`order_items`, CONSTRAINT `fk_order_items_to_orders` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `or...', 0)
+#1 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', NULL, false)
+#4 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\BaseModel.php(957): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\app\Controllers\Checkout.php(163): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+#9 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#10 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\lief\Documents\VSCode\Laragon\codeigniter\system\rewrite.php(44): require_once('C:\\Users\\lief\\D...')
+#15 {main}
+ERROR - 2025-11-02 10:42:55 --> [Checkout Error] Transaksi gagal disimpan.
+DEBUG - 2025-11-02 10:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:48:16 --> ErrorException: Undefined variable $subtotal
+[Method: POST, Route: checkout/place-order]
+in APPPATH\Controllers\Checkout.php on line 130.
+ 1 APPPATH\Controllers\Checkout.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subtotal', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Controllers\\Checkout.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Checkout->placeOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:58:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "order_success.php"
+[Method: GET, Route: order/success]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('order_success.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('order_success', [], true)
+ 3 APPPATH\Controllers\OrderController.php(31): view('order_success', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->success()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 10:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 10:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 10:58:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "order_success.php"
+[Method: GET, Route: order/success]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('order_success.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('order_success', [], true)
+ 3 APPPATH\Controllers\OrderController.php(31): view('order_success', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->success()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:02:00 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\OrderModel::getOrderWithItems
+[Method: GET, Route: admin/orders/json/7]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\AdminController.php(437): CodeIgniter\Model->__call('getOrderWithItems', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->getOrderDetailJson('7')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:02:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/orders.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/orders.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/orders', [], true)
+ 3 APPPATH\Controllers\AdminController.php(278): view('admin/orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:17:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/orders.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/orders.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/orders', [], true)
+ 3 APPPATH\Controllers\AdminController.php(471): view('admin/orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:18:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/orders.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/orders.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/orders', [], true)
+ 3 APPPATH\Controllers\AdminController.php(471): view('admin/orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:18:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/orders.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/orders.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/orders', [], true)
+ 3 APPPATH\Controllers\AdminController.php(471): view('admin/orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:19:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/orders.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/orders.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/orders', [], true)
+ 3 APPPATH\Controllers\AdminController.php(471): view('admin/orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:22:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/orders.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/orders.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/orders', [], true)
+ 3 APPPATH\Controllers\AdminController.php(471): view('admin/orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:22:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/orders.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/orders.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/orders', [], true)
+ 3 APPPATH\Controllers\AdminController.php(471): view('admin/orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 11:35:44 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\OrderModel::getSalesStats
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\AdminController.php(37): CodeIgniter\Model->__call('getSalesStats', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 11:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 11:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-02 12:51:47 --> ErrorException: Undefined variable $product
+[Method: GET, Route: cart]
+in APPPATH\Views\cart.php on line 26.
+ 1 APPPATH\Views\cart.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Views\\cart.php', 26)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\app\\Views\\cart.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('cart', [], true)
+ 5 APPPATH\Controllers\ProductController.php(82): view('cart', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->showCart()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\lief\\Documents\\VSCode\\Laragon\\codeigniter\\public\\index.php')
+DEBUG - 2025-11-02 12:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-02 12:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

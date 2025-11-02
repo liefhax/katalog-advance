@@ -1,0 +1,26 @@
+DEBUG - 2025-10-25 15:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-25 15:04:41 --> [RajaOngkir] Client error: `POST https://api.rajaongkir.com/starter/cost` resulted in a `410 Gone` response:
+{"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
+
+DEBUG - 2025-10-25 15:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-25 15:22:14 --> [RajaOngkir] Client error: `POST https://api.rajaongkir.com/starter/cost` resulted in a `410 Gone` response:
+{"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
+
+DEBUG - 2025-10-25 15:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-25 15:22:34 --> [RajaOngkir] Client error: `POST https://api.rajaongkir.com/starter/cost` resulted in a `410 Gone` response:
+{"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
+
+DEBUG - 2025-10-25 15:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-25 15:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-25 15:25:38 --> [RajaOngkir] Client error: `POST https://api.rajaongkir.com/starter/cost` resulted in a `410 Gone` response:
+{"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
+

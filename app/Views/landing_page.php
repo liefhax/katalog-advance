@@ -22,7 +22,7 @@
                 <div class="col">
                     <div class="card h-100 shadow-sm rounded-4 border-0 overflow-hidden">
                         <a href="<?= base_url('product/' . $product['slug']) ?>">
-                            <img src="<?= esc($product['image_url']) ?>" class="card-img-top product-img" alt="<?= esc($product['name']) ?>">
+                            <img src="<?= base_url('uploads/products/' . $product['image_url']) ?>" class="card-img-top product-img" alt="<?= esc($product['name']) ?>">
                         </a>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">

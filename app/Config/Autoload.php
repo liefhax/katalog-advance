@@ -88,5 +88,9 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $helpers = [];
+    public $helpers = [
+'qris', // <-- TAMBAHIN INI
+    'url', // (mungkin udah ada helper lain)
+    'form'
+    ];
 }

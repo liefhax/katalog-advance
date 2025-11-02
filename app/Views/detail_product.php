@@ -8,7 +8,7 @@
             <div class="row g-5">
                 <!-- Kolom Gambar Produk -->
                 <div class="col-lg-6">
-                    <img src="<?= esc($product['image_url']) ?>" class="img-fluid rounded-4" alt="<?= esc($product['name']) ?>">
+                    <img src="<?= base_url('uploads/products/' . $product['image_url']) ?>" class="card-img-top product-img" alt="<?= esc($product['name']) ?>">
                 </div>
 
                 <!-- Kolom Detail Produk -->

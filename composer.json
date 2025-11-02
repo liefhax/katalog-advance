@@ -13,6 +13,9 @@
         "php": "^8.1",
         "ext-intl": "*",
         "ext-mbstring": "*",
+        "chillerlan/php-qrcode": "^5.0",
+        "endroid/qr-code": "^6.0",
+        "guzzlehttp/guzzle": "^7.10",
         "laminas/laminas-escaper": "^2.17",
         "psr/log": "^3.0"
     },

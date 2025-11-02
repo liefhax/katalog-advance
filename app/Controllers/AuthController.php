@@ -14,11 +14,13 @@ class AuthController extends BaseController
         // Jika sudah login, redirect berdasarkan role
         if (session()->get('isLoggedIn')) {
             $user = session()->get('user');
-            
+
             // DEBUG: Cek session
             // echo "<pre>Session User: "; print_r($user); echo "</pre>"; die();
-            
+
             if ($user && $user['is_admin'] == 1) {
+                $namaUser = session()->get('user')['name'] ?? 'Admin';
+                session()->setFlashdata('login_success', 'Login berhasil! Selamat datang, ' . $namaUser);
                 // Jika admin, redirect ke admin dashboard
                 return redirect()->to('/admin/dashboard');
             } else {
@@ -26,7 +28,7 @@ class AuthController extends BaseController
                 return redirect()->to('/');
             }
         }
-        
+
         $data = ['title' => 'Login ke Akun Anda'];
         return view('login', $data);
     }
@@ -35,7 +37,7 @@ class AuthController extends BaseController
     /**
      * Memproses data dari form login.
      */
-        public function processLogin()
+    public function processLogin()
     {
         $session = session();
         $userModel = new UserModel();
@@ -51,15 +53,15 @@ class AuthController extends BaseController
                 'email'    => $user['email'],
                 'is_admin' => $user['is_admin']
             ];
-            
+
             $session->set('isLoggedIn', true);
             $session->set('user', $sessionData);
-            
+
             // Redirect berdasarkan role
             if ($user['is_admin'] == 1) {
                 return redirect()->to('/admin/dashboard')->with('success', 'Selamat datang, Admin!');
             }
-            
+
             return redirect()->to('/')->with('success', 'Login berhasil!');
         } else {
             $session->setFlashdata('error', 'Email atau password salah.');
