@@ -29,6 +29,7 @@ $routes->get('cart', 'ProductController::showCart');
 $routes->post('cart/update', 'ProductController::updateCart');
 $routes->get('cart/remove/(:num)', 'ProductController::removeFromCart/$1');
 
+<<<<<<< HEAD
 // Rute untuk manajemen alamat (Buku Alamat)
 $routes->group('profile', ['filter' => 'auth'], static function ($routes) {
     // Halaman utama buku alamat (lihat semua)
@@ -103,10 +104,28 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     // =====================
     // PROMO MANAGEMENT
     // =====================
+=======
+// Route untuk Admin
+$routes->group('admin', ['filter' => 'auth'], function($routes) {
+    $routes->get('dashboard', 'AdminController::dashboard');
+    $routes->get('products', 'AdminController::products');
+    $routes->post('products/add', 'AdminController::addProduct');
+    $routes->post('products/edit/(:num)', 'AdminController::editProduct/$1');
+    $routes->get('products/delete/(:num)', 'AdminController::deleteProduct/$1');
+    $routes->get('categories', 'AdminController::categories');
+    $routes->get('orders', 'AdminController::orders');
+        // Orders
+    $routes->get('orders', 'AdminController::orders');
+    $routes->get('orders/(:num)', 'AdminController::orderDetail/$1');
+    $routes->post('orders/update-status/(:num)', 'AdminController::updateOrderStatus/$1');
+    
+    // Promos
+>>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
     $routes->get('promos', 'AdminController::promos');
     $routes->post('promos/add', 'AdminController::addPromo');
     $routes->post('promos/edit/(:num)', 'AdminController::editPromo/$1');
     $routes->get('promos/delete/(:num)', 'AdminController::deletePromo/$1');
+<<<<<<< HEAD
 
     // =====================
     // STOCK MANAGEMENT
@@ -129,3 +148,11 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->post('users/delete', 'UserController::delete');
     $routes->get('users/detail/(:num)', 'UserController::detail/$1');
 });
+=======
+    
+    // Stock Management
+    $routes->get('stock', 'AdminController::stockManagement');
+    $routes->post('stock/update/(:num)', 'AdminController::updateStock/$1');
+});
+
+>>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795

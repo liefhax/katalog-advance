@@ -40,7 +40,11 @@ class App extends BaseConfig
      * something else. If you have configured your web server to remove this file
      * from your site URIs, set this variable to an empty string.
      */
+<<<<<<< HEAD
     public string $indexPage = '';
+=======
+    public string $indexPage = 'index.php';
+>>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
 
     /**
      * --------------------------------------------------------------------------
@@ -199,7 +203,10 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+<<<<<<< HEAD
 
     public $rajaOngkirKey   = 'Ck2VcXcL869fbc62ccblbaa0Al34Ud2B'; // Ganti dengan API Key RajaOngkir 
     public $rajaOngkirOrigin = '9'; // Ganti 23 jadi ID Kota Asal
+=======
+>>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
 }
