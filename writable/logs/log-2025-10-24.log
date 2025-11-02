@@ -61,7 +61,6 @@ DEBUG - 2025-10-24 06:43:00 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-10-24 06:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-24 06:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-24 06:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-<<<<<<< HEAD
 DEBUG - 2025-10-24 07:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-24 07:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-24 07:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -5711,5 +5710,3 @@ DEBUG - 2025-10-24 18:35:23 --> Session: Class initialized using 'CodeIgniter\Se
 ERROR - 2025-10-24 18:35:24 --> [RajaOngkir] Client error: `POST https://api.rajaongkir.com/starter/cost` resulted in a `410 Gone` response:
 {"success":false,"code":410,"message":"Endpoint API ini sudah tidak aktif. Silakan migrasi ke platform baru dan lakukan  (truncated...)
 
-=======
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795

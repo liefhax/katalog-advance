@@ -203,10 +203,7 @@
         }
     });
 </script>
-<<<<<<< HEAD
 <?= $this->renderSection('scripts') ?>
-=======
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
 
 </body>
 </html>

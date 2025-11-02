@@ -8,7 +8,6 @@ class ProductModel extends Model
 {
     protected $table            = 'products';
     protected $primaryKey       = 'id';
-<<<<<<< HEAD
     protected $useAutoIncrement = true;
     protected $returnType       = 'array'; // Ubah ke array biar gampang di view
     protected $useSoftDeletes   = false;
@@ -36,14 +35,3 @@ class ProductModel extends Model
             ->findAll();
     }
 }
-=======
-    protected $allowedFields    = ['name', 'slug', 'description', 'price', 'image_url'];
-
-    // Dates
-    protected $useTimestamps    = true;
-
-    // Tipe data yang dikembalikan
-    protected $returnType       = 'array';
-}
-
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795

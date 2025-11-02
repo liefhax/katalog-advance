@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
 
-=======
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
 namespace App\Controllers;
 
 use App\Models\AdminModel;
@@ -10,10 +7,7 @@ use App\Models\ProductModel;
 use App\Models\CategoryModel;
 use App\Models\UserModel;
 use App\Models\OrderModel;
-<<<<<<< HEAD
 use App\Models\OrderItemModel;
-=======
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
 use App\Models\PromoModel;
 
 class AdminController extends BaseController
@@ -22,21 +16,15 @@ class AdminController extends BaseController
     protected $productModel;
     protected $categoryModel;
     protected $orderModel;
-<<<<<<< HEAD
     protected $orderItemModel;
     protected $promoModel;
 
-=======
-    protected $promoModel;
-    
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
     public function __construct()
     {
         $this->adminModel = new AdminModel();
         $this->productModel = new ProductModel();
         $this->categoryModel = new CategoryModel();
         $this->orderModel = new OrderModel();
-<<<<<<< HEAD
         $this->orderItemModel = new OrderItemModel();
         $this->promoModel = new PromoModel();
 
@@ -48,18 +36,6 @@ class AdminController extends BaseController
     {
         $salesStats = $this->orderModel->getSalesStats();
 
-=======
-        $this->promoModel = new PromoModel();
-        
-        // Middleware untuk cek admin
-
-    }
-    
-    public function dashboard()
-    {
-        $salesStats = $this->orderModel->getSalesStats();
-        
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
         $data = [
             'title' => 'Admin Dashboard',
             'total_products' => $this->productModel->countAll(),
@@ -70,7 +46,6 @@ class AdminController extends BaseController
             'recent_orders' => $this->orderModel->getOrdersWithDetails(5),
             'sales_stats' => $salesStats
         ];
-<<<<<<< HEAD
 
         return view('admin/dashboard', $data);
     }
@@ -297,73 +272,16 @@ class AdminController extends BaseController
 
     // PROMO & VOUCHER MANAGEMENT
 
-=======
-        
-        return view('admin/dashboard', $data);
-    }
-    
-    // ... [method products, addProduct, editProduct, deleteProduct tetap sama]
-    
-    public function orders()
-    {
-        $data = [
-            'title' => 'Kelola Pesanan',
-            'orders' => $this->orderModel->getOrdersWithDetails()
-        ];
-        
-        return view('admin/orders', $data);
-    }
-    
-    public function orderDetail($id)
-    {
-        $order = $this->orderModel->getOrderWithItems($id);
-        
-        if (!$order) {
-            return redirect()->to('/admin/orders')->with('error', 'Pesanan tidak ditemukan');
-        }
-        
-        $data = [
-            'title' => 'Detail Pesanan #' . $order->order_code,
-            'order' => $order
-        ];
-        
-        return view('admin/order_detail', $data);
-    }
-    
-    public function updateOrderStatus($id)
-    {
-        $status = $this->request->getPost('status');
-        $validStatuses = ['pending', 'processing', 'shipped', 'delivered', 'cancelled'];
-        
-        if (!in_array($status, $validStatuses)) {
-            return redirect()->back()->with('error', 'Status tidak valid');
-        }
-        
-        if ($this->orderModel->updateOrderStatus($id, $status)) {
-            return redirect()->back()->with('success', 'Status pesanan berhasil diupdate');
-        }
-        
-        return redirect()->back()->with('error', 'Gagal mengupdate status pesanan');
-    }
-    
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
     public function promos()
     {
         $data = [
             'title' => 'Kelola Promo & Voucher',
             'promos' => $this->promoModel->findAll()
         ];
-<<<<<<< HEAD
 
         return view('admin/promos', $data);
     }
 
-=======
-        
-        return view('admin/promos', $data);
-    }
-    
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
     public function addPromo()
     {
         if ($this->request->getMethod() === 'post') {
@@ -374,11 +292,7 @@ class AdminController extends BaseController
                 'start_date' => 'required',
                 'end_date' => 'required'
             ];
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
             if ($this->validate($rules)) {
                 $promoData = [
                     'name' => $this->request->getPost('name'),
@@ -393,27 +307,16 @@ class AdminController extends BaseController
                     'end_date' => $this->request->getPost('end_date'),
                     'is_active' => $this->request->getPost('is_active') ? 1 : 0
                 ];
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
                 if ($this->promoModel->save($promoData)) {
                     return redirect()->to('/admin/promos')->with('success', 'Promo berhasil ditambahkan');
                 }
             }
         }
-<<<<<<< HEAD
 
         return redirect()->back()->with('errors', $this->validator->getErrors());
     }
 
-=======
-        
-        return redirect()->back()->with('errors', $this->validator->getErrors());
-    }
-    
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
     public function editPromo($id)
     {
         if ($this->request->getMethod() === 'post') {
@@ -424,11 +327,7 @@ class AdminController extends BaseController
                 'start_date' => 'required',
                 'end_date' => 'required'
             ];
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
             if ($this->validate($rules)) {
                 $promoData = [
                     'id' => $id,
@@ -444,43 +343,25 @@ class AdminController extends BaseController
                     'end_date' => $this->request->getPost('end_date'),
                     'is_active' => $this->request->getPost('is_active') ? 1 : 0
                 ];
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
                 if ($this->promoModel->save($promoData)) {
                     return redirect()->to('/admin/promos')->with('success', 'Promo berhasil diupdate');
                 }
             }
         }
-<<<<<<< HEAD
 
         return redirect()->back()->with('errors', $this->validator->getErrors());
     }
 
-=======
-        
-        return redirect()->back()->with('errors', $this->validator->getErrors());
-    }
-    
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
     public function deletePromo($id)
     {
         if ($this->promoModel->delete($id)) {
             return redirect()->back()->with('success', 'Promo berhasil dihapus');
         }
-<<<<<<< HEAD
 
         return redirect()->back()->with('error', 'Gagal menghapus promo');
     }
 
-=======
-        
-        return redirect()->back()->with('error', 'Gagal menghapus promo');
-    }
-    
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
     public function stockManagement()
     {
         $data = [
@@ -489,7 +370,6 @@ class AdminController extends BaseController
                 ->join('categories', 'categories.id = products.category_id', 'left')
                 ->findAll()
         ];
-<<<<<<< HEAD
 
         return view('admin/stock', $data);
     }
@@ -688,24 +568,3 @@ class AdminController extends BaseController
         return redirect()->back()->with('success', 'Pesanan berhasil dihapus.');
     }
 }
-=======
-        
-        return view('admin/stock', $data);
-    }
-    
-    public function updateStock($id)
-    {
-        $stock = $this->request->getPost('stock');
-        
-        if (!is_numeric($stock) || $stock < 0) {
-            return redirect()->back()->with('error', 'Stok harus berupa angka positif');
-        }
-        
-        if ($this->productModel->update($id, ['stock' => $stock])) {
-            return redirect()->back()->with('success', 'Stok berhasil diupdate');
-        }
-        
-        return redirect()->back()->with('error', 'Gagal mengupdate stok');
-    }
-}
->>>>>>> 3f36f2c33831e6bfbf5d2bedd649fd897e4a7795
