@@ -1,0 +1,304 @@
+ERROR - 2025-11-08 08:52:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'katalog', 3306, '', 0)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#6 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#9 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#5 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#6 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#13 {main}
+CRITICAL - 2025-11-08 08:52:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+ORDER BY `created_at` DESC
+ LIMIT 8', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+ 5 APPPATH\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Landing->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\projects\\others\\katalog-advance\\public\\index.php')
+ERROR - 2025-11-08 08:52:10 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'katalog', 3306, '', 0)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#6 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#9 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#5 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#6 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#13 {main}
+CRITICAL - 2025-11-08 08:52:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+ORDER BY `created_at` DESC
+ LIMIT 8', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+ 5 APPPATH\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Landing->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\projects\\others\\katalog-advance\\public\\index.php')
+ERROR - 2025-11-08 10:07:18 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'katalog', 3306, '', 0)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#6 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#9 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#5 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#6 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#13 {main}
+CRITICAL - 2025-11-08 10:07:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+ORDER BY `created_at` DESC
+ LIMIT 8', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+ 5 APPPATH\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Landing->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\projects\\others\\katalog-advance\\public\\index.php')
+ERROR - 2025-11-08 10:07:33 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'katalog' in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'katalog', 3306, '', 0)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#6 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#9 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'katalog' in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\projects\others\katalog-advance\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\projects\others\katalog-advance\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\projects\others\katalog-advance\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+#5 C:\projects\others\katalog-advance\app\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+#6 C:\projects\others\katalog-advance\system\CodeIgniter.php(933): App\Controllers\Landing->index()
+#7 C:\projects\others\katalog-advance\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#8 C:\projects\others\katalog-advance\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\others\katalog-advance\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\others\katalog-advance\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\projects\others\katalog-advance\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\projects\others\katalog-advance\system\rewrite.php(44): require_once('C:\\projects\\oth...')
+#13 {main}
+CRITICAL - 2025-11-08 10:07:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'katalog'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+ORDER BY `created_at` DESC
+ LIMIT 8', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(8, 0)
+ 5 APPPATH\Controllers\landing.php(19): CodeIgniter\BaseModel->findAll(8)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Landing->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\projects\\others\\katalog-advance\\public\\index.php')
+ERROR - 2025-11-08 10:08:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'katalog' in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'katalog', 3306, '', 0)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\projects\others\katalog-advance\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\projects\others\katalog-advance\system\Database\MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\projects\others\katalog-advance\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\projects\others\katalog-advance\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\projects\others\katalog-advance\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\projects\others\katalog-advance\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\projects\others\katalog-advance\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\projects\others\katalog-advance\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'katalog' in C:\projects\others\katalog-advance\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\projects\others\katalog-advance\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\projects\others\katalog-advance\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\projects\others\katalog-advance\system\Database\MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\projects\others\katalog-advance\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\projects\others\katalog-advance\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\projects\others\katalog-advance\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\projects\others\katalog-advance\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 C:\projects\others\katalog-advance\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\projects\others\katalog-advance\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+DEBUG - 2025-11-08 10:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 10:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-08 11:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -2,182 +2,259 @@
 
 <?= $this->section('content') ?>
 
-<main class="container-xl my-5 mx-auto">
-    <h1 class="mb-4 fw-bold">Checkout</h1>
+<div class="py-8 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto space-y-8 animate-fade-in">
 
-    <form action="<?= base_url('checkout/place-order') ?>" method="post">
-        <?= csrf_field() ?>
+        <!-- Header Section -->
+        <div>
+            <h1 class="text-4xl font-bold text-gray-900 tracking-tight">
+                Checkout
+            </h1>
+            <a href="<?= base_url('cart') ?>"
+               class="inline-flex items-center mt-2 text-base text-gray-600 hover:text-gray-900 hover:underline transition-colors duration-200">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Kembali ke Keranjang
+            </a>
+        </div>
 
-        <div class="row g-5">
+        <!-- Notification Messages -->
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 px-6 py-4 shadow-sm animate-slide-down max-w-4xl mx-auto" role="alert">
+                <span class="block sm:inline"><?= session()->getFlashdata('success') ?></span>
+            </div>
+        <?php endif; ?>
 
-            <div class="col-lg-7">
-                <div class="card shadow-sm border-0 rounded-4">
-                    <div class="card-body p-4 p-md-5">
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 px-6 py-4 shadow-sm animate-slide-down max-w-4xl mx-auto" role="alert">
+                <span class="block sm:inline"><?= session()->getFlashdata('error') ?></span>
+            </div>
+        <?php endif; ?>
 
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h4 class="fw-bold mb-0">Pilih Alamat Pengiriman</h4>
-                            <a href="<?= base_url('profile/addresses/new') ?>" class="btn btn-sm btn-outline-primary">
-                                <i class="bi bi-plus-lg"></i> Tambah Alamat
+        <!-- Dynamic notification area for AJAX operations -->
+        <div id="notification-area" class="max-w-4xl mx-auto"></div>
+
+        <form action="<?= base_url('checkout/place-order') ?>" method="post">
+            <?= csrf_field() ?>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Left Column - Address & Shipping -->
+                <div class="space-y-6">
+
+                    <!-- Address Selection -->
+                    <div class="bg-white p-6 shadow-lg border border-gray-200">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-bold text-gray-900">Pilih Alamat Pengiriman</h3>
+                            <a href="<?= base_url('profile/addresses/new') ?>"
+                               class="inline-flex items-center px-3 py-1.5 border border-blue-300 text-sm font-medium text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                                Tambah Alamat
                             </a>
                         </div>
 
-                        <?php foreach ($addresses as $index => $address): ?>
-                            <div class="form-check border rounded-3 p-4 mb-3">
-                                <input class="form-check-input" type="radio"
-                                       name="user_address_id"
-                                       id="address-<?= $address['id'] ?>"
-                                       value="<?= $address['id'] ?>"
-                                       <?= $address['is_default'] == 1 ? 'checked' : '' ?>
-                                       data-city-name="<?= esc($address['city_name']) ?>" required>
-                                
-                                <label class="form-check-label w-100" 
-                                       for="address-<?= $address['id'] ?>" 
-                                       style="cursor: pointer;"
-                                       data-province-name="<?= esc($address['province_name']) ?>"
-                                       data-city-name="<?= esc($address['city_name']) ?>"
-                                       data-subdistrict-name="<?= esc($address['subdistrict_name']) ?>"
-                                >
-                                    <div class="d-flex justify-content-between">
-                                        <span class="fw-bold fs-5"><?= esc($address['label']) ?></span>
-                                        <?php if ($address['is_default'] == 1): ?>
-                                            <span class="badge bg-primary">Utama</span>
-                                        <?php endif; ?>
+                        <div class="space-y-3">
+                            <?php foreach ($addresses as $index => $address): ?>
+                                <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                    <div class="flex items-start">
+                                        <input class="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                                               type="radio"
+                                               name="user_address_id"
+                                               id="address-<?= $address['id'] ?>"
+                                               value="<?= $address['id'] ?>"
+                                               <?= $address['is_default'] == 1 ? 'checked' : '' ?>
+                                               data-city-name="<?= esc($address['city_name']) ?>" required>
+
+                                        <label class="ml-3 flex-1 cursor-pointer" for="address-<?= $address['id'] ?>">
+                                            <div class="flex justify-between items-start mb-2">
+                                                <span class="font-bold text-gray-900 text-lg"><?= esc($address['label']) ?></span>
+                                                <?php if ($address['is_default'] == 1): ?>
+                                                    <span class="inline-flex items-center px-2 py-1 text-xs font-medium text-blue-800 bg-blue-100 rounded-full">Utama</span>
+                                                <?php endif; ?>
+                                            </div>
+                                            <p class="font-semibold text-gray-900 mb-1"><?= esc($address['recipient_name']) ?></p>
+                                            <p class="text-gray-600 mb-1"><?= esc($address['recipient_phone']) ?></p>
+                                            <p class="text-gray-600 text-sm leading-relaxed">
+                                                <?= esc($address['street_address']) ?><br>
+                                                <?= esc($address['subdistrict_name']) ?>, <?= esc($address['city_name']) ?><br>
+                                                <?= esc($address['province_name']) ?>, <?= esc($address['postal_code']) ?>
+                                            </p>
+                                        </label>
                                     </div>
-                                    <p class="fw-bold mb-1 mt-1"><?= esc($address['recipient_name']) ?></p>
-                                    <p class="text-muted mb-1"><?= esc($address['recipient_phone']) ?></p>
-                                    <p class="text-muted mb-0" style="line-height: 1.6;">
-                                        <?= esc($address['street_address']) ?><br>
-                                        <?= esc($address['subdistrict_name']) ?>, <?= esc($address['city_name']) ?><br>
-                                        <?= esc($address['province_name']) ?>, <?= esc($address['postal_code']) ?>
-                                    </p>
-                                </label>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Selection -->
+                    <div class="bg-white p-6 shadow-lg border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Pilih Pengiriman</h3>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label for="select_courier" class="block text-sm font-medium text-gray-700 mb-2">Kurir</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        id="select_courier" required>
+                                    <option value="">Pilih Kurir...</option>
+                                    <option value="jne">JNE</option>
+                                    <option value="tiki">TIKI</option>
+                                    <option value="pos">POS Indonesia</option>
+                                </select>
                             </div>
-                        <?php endforeach; ?>
 
-
-                        <hr class="my-4">
-                        <h4 class="fw-bold mb-4">Pilih Pengiriman</h4>
-
-                        <div class="mb-3">
-                            <label for="select_courier" class="form-label">Kurir</label>
-                            <select class="form-select" id="select_courier" required>
-                                <option value="">Pilih Kurir...</option>
-                                <option value="jne">JNE</option>
-                                <option value="tiki">TIKI</option>
-                                <option value="pos">POS Indonesia</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="select_service" class="form-label">Layanan</label>
-                            <select class="form-select" id="select_service" name="shipping_service" required disabled>
-                                <option value="">Pilih Layanan...</option>
-                            </select>
-                            <input type="hidden" name="shipping_service_name" id="input_shipping_service_name">
-                        </div>
-
-
-                        <div class="form-check border rounded-3 p-4 mb-3">
-                            <input class="form-check-input" type="radio" name="payment_method" id="pay_bca" value="bca_manual" checked required>
-                            <label class="form-check-label w-100 fw-bold" for="pay_bca">
-                                Bank Transfer BCA (Manual)
-                            </label>
-                        </div>
-
-                        <div class="form-check border rounded-3 p-4 mb-3">
-                            <input class="form-check-input" type="radio" name="payment_method" id="pay_mandiri" value="mandiri_manual" required>
-                            <label class="form-check-label w-100 fw-bold" for="pay_mandiri">
-                                Bank Transfer Mandiri (Manual)
-                            </label>
-                        </div>
-
-                        <div class="form-check border rounded-3 p-4 mb-3">
-                            <input class="form-check-input" type="radio" name="payment_method" id="pay_qris" value="qris_manual" required>
-                            <label class="form-check-label w-100 fw-bold" for="pay_qris">
-                                QRIS (Gopay, OVO, DANA, ShopeePay)
-                            </label>
-
-                            <div id="qris-image-container" class="mt-3" style="display: none;">
+                            <div>
+                                <label for="select_service" class="block text-sm font-medium text-gray-700 mb-2">Layanan</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100"
+                                        id="select_service" name="shipping_service" required disabled>
+                                    <option value="">Pilih Layanan...</option>
+                                </select>
+                                <input type="hidden" name="shipping_service_name" id="input_shipping_service_name">
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-lg-5">
-                <div class="card shadow-sm border-0 rounded-4 sticky-top" style="top: 2rem;">
-                    <div class="card-body p-4">
-                        <h4 class="fw-bold mb-4">Ringkasan Pesanan</h4>
+                    <!-- Payment Method Selection -->
+                    <div class="bg-white p-6 shadow-lg border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Metode Pembayaran</h3>
 
-                        <?php foreach ($cartItems as $item): ?>
-                            <div class="d-flex align-items-center mb-3">
-                                <img src="<?= base_url('uploads/products/' . $item['image_url']) ?>" class="rounded" style="width: 60px; height: 60px; object-fit: cover;">
-                                <div class="ms-3 flex-grow-1">
-                                    <p class="fw-bold mb-0 text-truncate"><?= esc($item['name']) ?></p>
-                                    <small class="text-muted"><?= $item['quantity'] ?> x Rp <?= number_format($item['price'], 0, ',', '.') ?></small>
+                        <div class="space-y-3">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                <div class="flex items-center">
+                                    <input class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                                           type="radio" name="payment_method" id="pay_bca" value="bca_manual" checked required>
+                                    <label class="ml-3 font-semibold text-gray-900 cursor-pointer" for="pay_bca">
+                                        Bank Transfer BCA (Manual)
+                                    </label>
                                 </div>
-                                <span class="fw-bold ms-3">Rp <?= number_format($item['price'] * $item['quantity'], 0, ',', '.') ?></span>
                             </div>
-                        <?php endforeach; ?>
 
-                        <hr>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                <div class="flex items-center">
+                                    <input class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                                           type="radio" name="payment_method" id="pay_mandiri" value="mandiri_manual" required>
+                                    <label class="ml-3 font-semibold text-gray-900 cursor-pointer" for="pay_mandiri">
+                                        Bank Transfer Mandiri (Manual)
+                                    </label>
+                                </div>
+                            </div>
 
-                        <label for="promo_code" class="form-label">Kode Promo</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="promo_code" name="promo_code" placeholder="Masukkan kode promo">
-                            <button class="btn btn-outline-secondary" type="button" id="apply-promo-btn">Gunakan</button>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
+                                <div class="flex items-center">
+                                    <input class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                                           type="radio" name="payment_method" id="pay_qris" value="qris_manual" required>
+                                    <label class="ml-3 font-semibold text-gray-900 cursor-pointer" for="pay_qris">
+                                        QRIS (Gopay, OVO, DANA, ShopeePay)
+                                    </label>
+                                </div>
+                                <div id="qris-image-container" class="mt-3 hidden">
+                                </div>
+                            </div>
                         </div>
-                        <div id="promo-message" class="mb-3"></div>
-                        <hr>
+                    </div>
 
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal</span>
-                            <span class="fw-bold">Rp <?= number_format($total, 0, ',', '.') ?></span>
+                </div>
+
+                <!-- Right Column - Order Summary -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-6 shadow-lg border border-gray-200 sticky top-6">
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Ringkasan Pesanan</h3>
+
+                        <!-- Cart Items -->
+                        <div class="space-y-4 mb-6">
+                            <?php foreach ($cartItems as $item): ?>
+                                <div class="flex items-center space-x-3">
+                                    <img src="<?= base_url('uploads/products/' . $item['image_url']) ?>"
+                                         class="w-16 h-16 object-cover rounded-md border border-gray-200" alt="<?= esc($item['name']) ?>">
+                                    <div class="flex-1 min-w-0">
+                                        <p class="font-semibold text-gray-900 truncate text-sm"><?= esc($item['name']) ?></p>
+                                        <p class="text-gray-600 text-sm">
+                                            <?= $item['quantity'] ?> x Rp <?= number_format($item['price'], 0, ',', '.') ?>
+                                        </p>
+                                    </div>
+                                    <span class="font-bold text-gray-900 text-sm">
+                                        Rp <?= number_format($item['price'] * $item['quantity'], 0, ',', '.') ?>
+                                    </span>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
 
-                        <div class="d-flex justify-content-between mb-2 text-danger">
-                            <span>Diskon</span>
-                            <span class="fw-bold" id="discount-display">- Rp 0</span>
+                        <hr class="border-gray-200 mb-6">
+
+                        <!-- Promo Code -->
+                        <div class="mb-6">
+                            <label for="promo_code" class="block text-sm font-medium text-gray-700 mb-2">Kode Promo</label>
+                            <div class="flex space-x-2">
+                                <input type="text"
+                                       class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       id="promo_code" name="promo_code" placeholder="Masukkan kode promo">
+                                <button class="px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                                        type="button" id="apply-promo-btn">
+                                    Gunakan
+                                </button>
+                            </div>
+                            <div id="promo-message" class="mt-2"></div>
                         </div>
 
-                        <div class="d-flex justify-content-between mb-3">
-                            <span>Biaya Pengiriman</span>
-                            <span class="fw-bold" id="shipping-cost-display">Rp 0</span>
+                        <hr class="border-gray-200 mb-4">
+
+                        <!-- Price Breakdown -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-gray-600">
+                                <span>Subtotal</span>
+                                <span class="font-semibold">Rp <?= number_format($total, 0, ',', '.') ?></span>
+                            </div>
+
+                            <div class="flex justify-between text-red-600">
+                                <span>Diskon</span>
+                                <span class="font-semibold" id="discount-display">- Rp 0</span>
+                            </div>
+
+                            <div class="flex justify-between text-gray-600">
+                                <span>Biaya Pengiriman</span>
+                                <span class="font-semibold" id="shipping-cost-display">Rp 0</span>
+                            </div>
+
+                            <div class="flex justify-between text-gray-600">
+                                <span>Kode Unik</span>
+                                <span class="font-semibold" id="unique-code-display">Rp 0</span>
+                            </div>
+
+                            <hr class="border-gray-200">
+
+                            <div class="flex justify-between text-lg font-bold text-gray-900">
+                                <span>Total Bayar</span>
+                                <span id="total-bayar-display">Rp <?= number_format($total, 0, ',', '.') ?></span>
+                            </div>
                         </div>
 
-                        <div class="d-flex justify-content-between mb-3">
-                            <span>Kode Unik</span>
-                            <span class="fw-bold" id="unique-code-display">Rp 0</span>
-                        </div>
-                        <div class="d-flex justify-content-between fw-bold fs-5">
-                            <span>Total Bayar</span>
-                            <span id="total-bayar-display">Rp <?= number_format($total, 0, ',', '.') ?></span>
-                        </div>
-
+                        <!-- Hidden Inputs -->
                         <input type="hidden" name="unique_code" id="input_unique_code" value="0">
                         <input type="hidden" name="shipping_cost" id="input_shipping_cost" value="0">
                         <input type="hidden" name="discount_amount" id="input_discount_amount" value="0">
                         <input type="hidden" name="subtotal" id="input_subtotal" value="<?= $total ?>">
                         <input type="hidden" name="total_amount" id="input_total_amount" value="<?= $total ?>">
-                        
+
                         <input type="hidden" name="selected_province_name" id="input_selected_province_name" value="">
                         <input type="hidden" name="selected_city_name" id="input_selected_city_name" value="">
                         <input type="hidden" name="selected_subdistrict_name" id="input_selected_subdistrict_name" value="">
 
-
-                        <div class="d-grid mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                Buat Pesanan
-                            </button>
-                        </div>
+                        <!-- Submit Button -->
+                        <button type="submit"
+                                class="w-full bg-black text-white py-3 px-4 text-lg font-semibold hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg">
+                            Buat Pesanan
+                        </button>
 
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </form>
-</main>
+            </div>
+        </form>
+    </div>
+</div>
 
 <?= $this->endSection() ?>
 
@@ -315,11 +392,11 @@
         async function applyPromo() {
             const code = promoInput.value;
             if (!code) {
-                promoMessage.innerHTML = '<small class="text-danger">Masukkan kode promo.</small>';
+                promoMessage.innerHTML = '<small class="text-red-600">Masukkan kode promo.</small>';
                 return;
             }
 
-            promoMessage.innerHTML = '<small class="text-muted">Mengecek kode...</small>';
+            promoMessage.innerHTML = '<small class="text-gray-600">Mengecek kode...</small>';
             promoBtn.disabled = true;
 
             try {
@@ -337,11 +414,11 @@
 
                 if (result.success) {
                     currentDiscount = parseFloat(result.discount_amount);
-                    promoMessage.innerHTML = `<small class="text-success">${result.message}</small>`;
+                    promoMessage.innerHTML = `<small class="text-green-600">${result.message}</small>`;
                     promoInput.disabled = true;
                 } else {
                     currentDiscount = 0;
-                    promoMessage.innerHTML = `<small class="text-danger">${result.message}</small>`;
+                    promoMessage.innerHTML = `<small class="text-red-600">${result.message}</small>`;
                     promoBtn.disabled = false;
                 }
 
@@ -349,7 +426,7 @@
 
             } catch (error) {
                 console.error('Error applying promo:', error);
-                promoMessage.innerHTML = '<small class="text-danger">Gagal terhubung ke server.</small>';
+                promoMessage.innerHTML = '<small class="text-red-600">Gagal terhubung ke server.</small>';
                 promoBtn.disabled = false;
             }
         }
@@ -379,7 +456,7 @@
                 if (result.qr_image_base64) {
                     qrisImageContainer.innerHTML = `
                     <p class="text-center mb-2">Scan dengan e-wallet kamu:</p>
-                    <img src="${result.qr_image_base64}" alt="Scan QRIS" class="img-fluid rounded border" style="max-width: 250px; margin: 0 auto; display: block;">
+                    <img src="${result.qr_image_base64}" alt="Scan QRIS" class="w-full max-w-xs mx-auto rounded-md border border-gray-200">
                 `;
                 } else {
                     throw new Error('Data QRIS tidak diterima');
@@ -387,7 +464,7 @@
 
             } catch (error) {
                 console.error('Error fetching QRIS:', error);
-                qrisImageContainer.innerHTML = '<p class="text-danger">Gagal memuat QR Code. Coba lagi.</p>';
+                qrisImageContainer.innerHTML = '<p class="text-red-600">Gagal memuat QR Code. Coba lagi.</p>';
             } finally {
                 isQrFetching = false; 
             }

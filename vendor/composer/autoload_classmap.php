@@ -4281,6 +4281,7 @@ return array(
     'Symfony\\Component\\Console\\Helper\\TableRows' => $vendorDir . '/symfony/console/Helper/TableRows.php',
     'Symfony\\Component\\Console\\Helper\\TableSeparator' => $vendorDir . '/symfony/console/Helper/TableSeparator.php',
     'Symfony\\Component\\Console\\Helper\\TableStyle' => $vendorDir . '/symfony/console/Helper/TableStyle.php',
+    'Symfony\\Component\\Console\\Helper\\TerminalInputHelper' => $vendorDir . '/symfony/console/Helper/TerminalInputHelper.php',
     'Symfony\\Component\\Console\\Helper\\TreeHelper' => $vendorDir . '/symfony/console/Helper/TreeHelper.php',
     'Symfony\\Component\\Console\\Helper\\TreeNode' => $vendorDir . '/symfony/console/Helper/TreeNode.php',
     'Symfony\\Component\\Console\\Helper\\TreeStyle' => $vendorDir . '/symfony/console/Helper/TreeStyle.php',

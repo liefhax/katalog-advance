@@ -12,6 +12,10 @@ $routes->get('/', 'Landing::index');
 // Rute untuk Halaman Semua Produk
 $routes->get('products', 'Landing::products');
 
+// Rute untuk About dan Contact
+$routes->get('about', 'Landing::about');
+$routes->get('contact', 'Landing::contact');
+
 // Rute untuk Pencarian
 $routes->get('search', 'Landing::search');
 
@@ -29,14 +33,19 @@ $routes->get('cart', 'ProductController::showCart');
 $routes->post('cart/update', 'ProductController::updateCart');
 $routes->get('cart/remove/(:num)', 'ProductController::removeFromCart/$1');
 
-// Rute untuk manajemen alamat (Buku Alamat)
+// Rute untuk Profile User
+$routes->get('profile', 'UserController::profile', ['filter' => 'auth']);
+$routes->post('profile/update', 'UserController::updateProfile', ['filter' => 'auth']);
+
+// Rute untuk manajemen alamat
 $routes->group('profile', ['filter' => 'auth'], static function ($routes) {
-    // Halaman utama buku alamat (lihat semua)
-    $routes->get('addresses', 'AddressController::index');
-    $routes->get('addresses/new', 'AddressController::new');
-    $routes->post('addresses/create', 'AddressController::create');
-    $routes->get('addresses/delete/(:num)', 'AddressController::delete/$1');
-    $routes->get('addresses/set-default/(:num)', 'AddressController::setDefault/$1');
+    $routes->get('addresses', 'UserController::addresses');
+    $routes->get('addresses/new', 'UserController::newAddress');
+    $routes->post('addresses/store', 'UserController::storeAddress');
+    $routes->get('addresses/set-default/(:num)', 'UserController::setDefaultAddress/$1');
+    $routes->post('addresses/delete/(:num)', 'UserController::deleteAddress/$1');
+    $routes->get('addresses/edit/(:num)', 'UserController::editAddress/$1');
+    $routes->post('addresses/update/(:num)', 'UserController::updateAddress/$1');
 });
 
 // API untuk ambil data ongkir

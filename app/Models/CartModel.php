@@ -18,7 +18,7 @@ class CartModel extends Model
      */
     public function getCartItems($userId)
     {
-        return $this->select('cart_items.id as cart_item_id, cart_items.quantity, products.id as product_id, products.name, products.price, products.image_url, products.stock')
+        return $this->select('cart_items.id as cart_item_id, cart_items.quantity, products.id as product_id, products.name, products.price, products.image_url, products.stock, products.category_id')
                     ->join('products', 'products.id = cart_items.product_id')
                     ->where('cart_items.user_id', $userId)
                     ->orderBy('cart_items.created_at', 'DESC')
@@ -35,7 +35,7 @@ class CartModel extends Model
             return [];
         }
 
-        return $this->select('cart_items.id as cart_item_id, cart_items.quantity, products.id as product_id, products.name, products.price, products.image_url, products.stock')
+        return $this->select('cart_items.id as cart_item_id, cart_items.quantity, products.id as product_id, products.name, products.price, products.image_url, products.stock, products.category_id')
                     ->join('products', 'products.id = cart_items.product_id')
                     ->where('cart_items.user_id', $userId)
                     ->whereIn('cart_items.id', $cartItemIds) // Hanya ambil yg ID-nya ada di array
